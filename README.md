@@ -17,18 +17,22 @@ Instalação direta pelo terminal:
 sudo apt-get install lirc
 ```
 2° Agora edite o arquivo /boot/config.txt , onde vamos fazer os módulos do lirc iniciar no boot, configurando os devidos pinos GPIO usados.
-Sudo nano /boot/config.txt
+```
+sudo nano /boot/config.txt
+```
 Procure pela linha “#dtoverlay=lirc-rpi”, descomente e deixe da seguinte forma:
+```
 dtoverlay=lirc-rpi,gpio_in_pin=21,gpio_out_pin=20
- 
+```
 gpio_in_pin = para o pino de recebimento de dados(RECEPTOR IR)
 gpio_out_pin = para o pino de saída de dados(LED IR)
 *Salve e feche o arquivo.
 
 3° Agora vamos configurar os arquivos do lirc, vamos editar o arquivo /etc/lirc/lirc_options.conf, procure pelas linhas “Driver = ...” e “Device =  ....” e deixe da seguinte forma:
+```
 Driver = default
 Device = /dev/lirc0
-
+```
 *Salve e feche o arquivo.
 
 4° TESTAR
