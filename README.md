@@ -36,6 +36,8 @@ Device = /dev/lirc0
 ```
 *Salve e feche o arquivo.
 
+###Não edite ou adicione o arquivo hardware.conf, outros tutorias podem mencionar este aquivo em /etc/lirc/hardware.conf, o lirc na versão 0.9.4 não utiliza mais este arquivo.
+
 4° TESTAR
 Vamos primeiro reiniciar o serviço do lirc para evitar erros:
 ```
