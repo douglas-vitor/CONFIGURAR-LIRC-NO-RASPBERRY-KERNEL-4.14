@@ -25,6 +25,7 @@ Procure pela linha “#dtoverlay=lirc-rpi”, descomente e deixe da seguinte for
 dtoverlay=lirc-rpi,gpio_in_pin=21,gpio_out_pin=20
 ```
 gpio_in_pin = para o pino de recebimento de dados(RECEPTOR IR)
+
 gpio_out_pin = para o pino de saída de dados(LED IR)
 *Salve e feche o arquivo.
 
