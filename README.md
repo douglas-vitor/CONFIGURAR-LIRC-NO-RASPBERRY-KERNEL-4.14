@@ -13,9 +13,9 @@ Siga a seguinte ordem de instalação dos pacotes:
 [5]    lirc_0.9.4c-9_armhf.deb
 
 Instalação direta pelo terminal:
-'''
+```
 sudo apt-get install lirc
-'''
+```
 2° Agora edite o arquivo /boot/config.txt , onde vamos fazer os módulos do lirc iniciar no boot, configurando os devidos pinos GPIO usados.
 Sudo nano /boot/config.txt
 Procure pela linha “#dtoverlay=lirc-rpi”, descomente e deixe da seguinte forma:
@@ -33,29 +33,29 @@ Device = /dev/lirc0
 
 4° TESTAR
 Vamos primeiro reiniciar o serviço do lirc para evitar erros:
-'''
+```
 sudo service lircd restart
-'''
+```
 Agora vamos reiniciar o respberry:
-'''
+```
 sudo reboot
-'''
+```
 
 *Após reiniciado, vamos procurar pelas mensagens do boot relacionadas ao lirc:
-'''
+```
 dmesg | grep lirc
-'''
+```
 *Agora vamos listar os device do lirc
-'''
+```
 ls –l /dev/lirc*
-'''
+```
 
 *se todos os comandos tiveram saídas positivas, esta tudo certo.
 *Para testar se o receptor esta ok, use o comando mode2 para que ele leia pulsos ir, então basta executar o comando a seguir e apertar botões de algum controle IR mirando no receiver IR.
-'''
+```
 mode2
-'''
+```
 Ou
-'''
-Mode2 –d /dev/lirc0
-'''
+```
+mode2 –d /dev/lirc0
+```
