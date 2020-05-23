@@ -19,11 +19,11 @@ Instalação direta pelo terminal:
 sudo apt-get install lirc
 ```
 ###### 2° Edição do arquivo /boot/config.txt
-Agora edite o arquivo /boot/config.txt , onde vamos fazer os módulos do lirc iniciar no boot, configurando os devidos pinos GPIO usados.
+*Agora edite o arquivo /boot/config.txt , onde vamos fazer os módulos do lirc iniciar no boot, configurando os devidos pinos GPIO usados.*
 ```
 sudo nano /boot/config.txt
 ```
-Procure pela linha “#dtoverlay=lirc-rpi”, descomente e deixe da seguinte forma:
+*Procure pela linha “#dtoverlay=lirc-rpi”, descomente e deixe da seguinte forma:*
 ```
 dtoverlay=lirc-rpi,gpio_in_pin=21,gpio_out_pin=20
 ```
@@ -36,7 +36,7 @@ dtoverlay=lirc-rpi,gpio_in_pin=21,gpio_out_pin=20
 *Salve e feche o arquivo.*
 
 ###### 3° Configuração do arquivo /etc/lirc/lirc_options.conf
-Agora vamos configurar os arquivos do lirc, vamos editar o arquivo /etc/lirc/lirc_options.conf, procure pelas linhas “Driver = ...” e “Device =  ....” e deixe da seguinte forma:
+*Agora vamos configurar os arquivos do lirc, vamos editar o arquivo /etc/lirc/lirc_options.conf, procure pelas linhas “Driver = ...” e “Device =  ....” e deixe da seguinte forma:*
 ```
 Driver = default
 Device = /dev/lirc0
@@ -46,11 +46,11 @@ Device = /dev/lirc0
 ## Não edite ou adicione o arquivo hardware.conf, outros tutorias podem mencionar este arquivo em /etc/lirc/hardware.conf, o lirc na versão 0.9.4 não utiliza mais este arquivo.
 
 ###### 4° TESTAR
-Vamos primeiro reiniciar o serviço do lirc para evitar erros:
+*Vamos primeiro reiniciar o serviço do lirc para evitar erros:*
 ```
 sudo service lircd restart
 ```
-Agora vamos reiniciar o respberry:
+*Reinicie o respberry:*
 ```
 sudo reboot
 ```
