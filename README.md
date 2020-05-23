@@ -5,7 +5,7 @@
 ###### 1° INSTALAR O LIRC:
 Instalação manual do lirc 0.9.4c-9 no raspbian stretch:
 ```
-Sudo dpkg –i <PACOTE>
+sudo dpkg –i <PACOTE>
 ```
 Siga a seguinte ordem de instalação dos pacotes:
 - [1]    libusb-0.1-4_0.1.12-30_armhf.deb
@@ -27,9 +27,9 @@ Procure pela linha “#dtoverlay=lirc-rpi”, descomente e deixe da seguinte for
 ```
 dtoverlay=lirc-rpi,gpio_in_pin=21,gpio_out_pin=20
 ```
-**gpio_in_pin** = para o pino de recebimento de dados(RECEPTOR IR)
+**gpio_in_pin** = para o pino de recebimento de dados (RECEPTOR IR)
 
-**gpio_out_pin** = para o pino de saída de dados(LED IR)
+**gpio_out_pin** = para o pino de saída de dados (LED IR)
 
 *Adapte as configurações as suas necessidades.*
 
@@ -43,7 +43,7 @@ Device = /dev/lirc0
 ```
 *Salve e feche o arquivo.*
 
-## Não edite ou adicione o arquivo hardware.conf, outros tutorias podem mencionar este aquivo em /etc/lirc/hardware.conf, o lirc na versão 0.9.4 não utiliza mais este arquivo.
+## Não edite ou adicione o arquivo hardware.conf, outros tutorias podem mencionar este arquivo em /etc/lirc/hardware.conf, o lirc na versão 0.9.4 não utiliza mais este arquivo.
 
 ###### 4° TESTAR
 Vamos primeiro reiniciar o serviço do lirc para evitar erros:
