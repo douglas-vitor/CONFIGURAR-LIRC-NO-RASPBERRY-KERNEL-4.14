@@ -27,13 +27,13 @@ Procure pela linha “#dtoverlay=lirc-rpi”, descomente e deixe da seguinte for
 ```
 dtoverlay=lirc-rpi,gpio_in_pin=21,gpio_out_pin=20
 ```
-gpio_in_pin = para o pino de recebimento de dados(RECEPTOR IR)
+**gpio_in_pin** = para o pino de recebimento de dados(RECEPTOR IR)
 
-gpio_out_pin = para o pino de saída de dados(LED IR)
+**gpio_out_pin** = para o pino de saída de dados(LED IR)
 
-*Adapte as configurações as suas necessidades.
+*Adapte as configurações as suas necessidades.*
 
-*Salve e feche o arquivo.
+*Salve e feche o arquivo.*
 
 ###### 3° Configuração do arquivo /etc/lirc/lirc_options.conf
 Agora vamos configurar os arquivos do lirc, vamos editar o arquivo /etc/lirc/lirc_options.conf, procure pelas linhas “Driver = ...” e “Device =  ....” e deixe da seguinte forma:
