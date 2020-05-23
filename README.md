@@ -41,7 +41,7 @@ Agora vamos configurar os arquivos do lirc, vamos editar o arquivo /etc/lirc/lir
 Driver = default
 Device = /dev/lirc0
 ```
-*Salve e feche o arquivo.
+*Salve e feche o arquivo.*
 
 ## Não edite ou adicione o arquivo hardware.conf, outros tutorias podem mencionar este aquivo em /etc/lirc/hardware.conf, o lirc na versão 0.9.4 não utiliza mais este arquivo.
 
@@ -55,17 +55,17 @@ Agora vamos reiniciar o respberry:
 sudo reboot
 ```
 
-*Após reiniciado, vamos procurar pelas mensagens do boot relacionadas ao lirc:
+*Após reiniciado, vamos procurar pelas mensagens do boot relacionadas ao lirc:*
 ```
 dmesg | grep lirc
 ```
-*Agora vamos listar os device do lirc
+*Agora vamos listar os device do lirc*
 ```
 ls –l /dev/lirc*
 ```
 
-*se todos os comandos tiveram saídas positivas, esta tudo certo.
-*Para testar se o receptor esta ok, use o comando mode2 para que ele leia pulsos ir, então basta executar o comando a seguir e apertar botões de algum controle IR mirando no receiver IR.
+*se todos os comandos tiveram saídas positivas, esta tudo certo.*
+*Para testar se o receptor esta ok, use o comando mode2 para que ele leia pulsos ir, então basta executar o comando a seguir e apertar botões de algum controle IR mirando no receiver IR.*
 ```
 mode2
 ```
