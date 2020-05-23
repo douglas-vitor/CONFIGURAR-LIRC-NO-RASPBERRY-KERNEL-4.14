@@ -1,8 +1,8 @@
 # CONFIGURAR-LIRC-NO-RASPBERRY-KERNEL-4.14
-CONFIGURAR LIRC 0.9.4c-9  NO RASPBERRY STRETCH KERNEL 4.14
+###### CONFIGURAR LIRC 0.9.4c-9  NO RASPBERRY STRETCH KERNEL 4.14
 
 
-1° INSTALAR O LIRC:
+###### 1° INSTALAR O LIRC:
 Instalação manual do lirc 0.9.4c-9 no raspbian stretch:
 ```
 Sudo dpkg –i <PACOTE>
@@ -18,7 +18,8 @@ Instalação direta pelo terminal:
 ```
 sudo apt-get install lirc
 ```
-2° Agora edite o arquivo /boot/config.txt , onde vamos fazer os módulos do lirc iniciar no boot, configurando os devidos pinos GPIO usados.
+###### 2° Edição do arquivo /boot/config.txt
+Agora edite o arquivo /boot/config.txt , onde vamos fazer os módulos do lirc iniciar no boot, configurando os devidos pinos GPIO usados.
 ```
 sudo nano /boot/config.txt
 ```
@@ -34,16 +35,17 @@ gpio_out_pin = para o pino de saída de dados(LED IR)
 
 *Salve e feche o arquivo.
 
-3° Agora vamos configurar os arquivos do lirc, vamos editar o arquivo /etc/lirc/lirc_options.conf, procure pelas linhas “Driver = ...” e “Device =  ....” e deixe da seguinte forma:
+###### 3° Configuração do arquivo /etc/lirc/lirc_options.conf
+Agora vamos configurar os arquivos do lirc, vamos editar o arquivo /etc/lirc/lirc_options.conf, procure pelas linhas “Driver = ...” e “Device =  ....” e deixe da seguinte forma:
 ```
 Driver = default
 Device = /dev/lirc0
 ```
 *Salve e feche o arquivo.
 
-### Não edite ou adicione o arquivo hardware.conf, outros tutorias podem mencionar este aquivo em /etc/lirc/hardware.conf, o lirc na versão 0.9.4 não utiliza mais este arquivo.
+## Não edite ou adicione o arquivo hardware.conf, outros tutorias podem mencionar este aquivo em /etc/lirc/hardware.conf, o lirc na versão 0.9.4 não utiliza mais este arquivo.
 
-4° TESTAR
+###### 4° TESTAR
 Vamos primeiro reiniciar o serviço do lirc para evitar erros:
 ```
 sudo service lircd restart
